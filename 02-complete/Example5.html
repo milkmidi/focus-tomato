@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript</title>
+  </head>
+  <body>
+    <h1>JavaScript 基礎教學</h1>
+    <!-- TODO 2 -->
+    <script>
+      console.log("Hello, JavaScript!");
+    </script>
+
+    <!-- TODO 3 -->
+    <script>
+      // 用 let 宣告可以重新賦值
+      let age = 25;
+      age = 26;
+
+      // 用 const 宣告不能重新賦值（常數）
+      const PI = 3.14;
+
+      // var 是舊版用法，現在推薦用 let 或 const
+      var name = "milkmidi";
+
+      console.log("年齡:", age);
+      console.log("圓周率:", PI);
+      console.log("名字:", name);
+    </script>
+
+    <!-- TODO 4 -->
+    <script>
+      // 數字
+      let a = 10;
+      let b = 3;
+      console.log("加法:", a + b);
+      console.log("減法:", a - b);
+      console.log("乘法:", a * b);
+      console.log("除法:", a / b);
+      console.log("取餘數:", a % b);
+
+      // 字串
+      let greeting = "你好";
+      let name = "奶綠";
+      console.log(greeting + ", " + name + "!"); // 字串串接
+
+      // 布林值
+      let isJavaScriptFun = true;
+      console.log("JavaScript 有趣嗎？", isJavaScriptFun);
+    </script>
+
+    <!-- TODO 5 -->
+    <script>
+      let score = 85;
+      if (score >= 90) {
+        console.log("你的成績是 A");
+      } else if (score >= 75) {
+        console.log("你的成績是 B");
+      } else {
+        console.log("你的成績是 C");
+      }
+    </script>
+
+    <!-- TODO 6 -->
+    <script>
+      for (let i = 1; i <= 5; i++) {
+        console.log("第", i, "次迴圈");
+      }
+    </script>
+
+    <!-- TODO 7 -->
+    <script>
+      // 定義函式
+      function greet(name) {
+        return "你好, " + name + "!";
+      }
+      // 呼叫函式
+      let message = greet("小明");
+      console.log(message);
+    </script>
+
+    <!-- TODO 8 -->
+    <span id="seconds"></span>
+    <button id="start-btn" class="btn">開始</button>
+    <script>
+      let seconds = 0;
+      let timerId;
+      const startBtn = document.getElementById("start-btn");
+      const secondsSpan = document.getElementById("seconds");
+      function startTimer() {
+        timerId = setInterval(() => {
+          seconds++;
+          secondsSpan.textContent = seconds;
+        }, 1000);
+      }      
+      startBtn.addEventListener("click", startTimer);
+    </script>
+  </body>
+</html>
